@@ -1,5 +1,5 @@
+import { Blockquote, Container } from "@mantine/core";
 import { useEffect, useState } from "react";
-import "./App.css";
 
 function App() {
   const [quote, setQuote] = useState(null);
@@ -8,18 +8,16 @@ function App() {
       try {
         const res = await fetch("/time");
         const data = await res.json();
-        setQuote(data.time);
+        setQuote(data);
       } catch (error) {
         return error;
       }
     })();
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{quote}</p>
-      </header>
-    </div>
+    <Container fluid>
+      <Blockquote cite={quote?.context}>{quote?.quote}</Blockquote>
+    </Container>
   );
 }
 
