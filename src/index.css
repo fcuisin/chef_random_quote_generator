@@ -1,13 +1,48 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -webkit-tap-highlight-color: transparent;
+
+  font-family: "Outfit", sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  min-block-size: 100%;
+  padding-inline: 1rem;
+}
+
+html {
+  position: relative;
+  background-attachment: scroll, fixed;
+  background-blend-mode: multiply;
+  background-image: radial-gradient(
+      51.98% 51.98% at 75.49% 26.72%,
+      #330e82 0%,
+      #18004a 100%
+    ),
+    url("/public/grain.png");
+  background-size: auto, 22rem 30rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FF7461 !important;
+}
+
+button {
+  background-color: #FF7461 !important;;
+}
+
+.quote-wrapper {
+  position: "relative";
+  background-color: #ffffff0d;
+  background-image: 
+    radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(148,88,88,.48) 0%,
+      rgba(148,88,88,0) 100%);
 }

@@ -8,7 +8,7 @@ all_the_quotes = list(quotes_dict["quotes_list"])
 
 
 def get_random_quote(quotes_list):
-    random_num = random.randint(0, len(all_the_quotes))
+    random_num = random.randint(0, len(all_the_quotes) - 1)
     quote_obj = quotes_list[random_num]
     return quote_obj
 
