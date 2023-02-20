@@ -35,9 +35,9 @@ function App() {
       <Paper shadow="xs" py={80} px={40} radius="xl" className="quote-wrapper">
         <Stack align="center" spacing="md">
           <Title order={1}>Les phrases cultes de Nobert</Title>
-          <Blockquote cite={quote?.context}>
+          <Blockquote cite={`${quote?.context} - ${quote?.year}`}>
             <Text size="xl" color="white">
-              {quote?.quote} - {quote?.year}
+              {quote?.quote}
             </Text>
           </Blockquote>
 
