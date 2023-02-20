@@ -37,7 +37,7 @@ function App() {
           <Title order={1}>Les phrases cultes de Nobert</Title>
           <Blockquote cite={quote?.context}>
             <Text size="xl" color="white">
-              {quote?.quote}
+              {quote?.quote} - {quote?.year}
             </Text>
           </Blockquote>
 
