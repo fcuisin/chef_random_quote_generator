@@ -13,8 +13,18 @@ def get_random_quote(quotes_list):
     return quote_obj
 
 
-def print_quote():
-    random_quote = get_random_quote(all_the_quotes)
+def filter_quotes_by_name(name):
+    result = []
+    for quote in all_the_quotes:
+        if name.lower() in quote['author'].lower():
+            result.append(quote)
+
+    return result
+
+
+def print_quote(name):
+    quotes_by_name = filter_quotes_by_name(name)
+    random_quote = get_random_quote(quotes_by_name)
 
     return random_quote
 

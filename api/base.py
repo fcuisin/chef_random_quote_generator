@@ -5,6 +5,6 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/quote')
-def get_random_quote():
-    return print_quote()
+@app.route('/quote/<name>')
+def get_random_quote(name):
+    return print_quote(name)

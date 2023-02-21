@@ -17,7 +17,7 @@ function App() {
 
   const handleGetQuote = async () => {
     try {
-      const res = await fetch("/quote");
+      const res = await fetch("/quote/norbert");
       const data = await res.json();
       setQuote(data);
     } catch (error) {
